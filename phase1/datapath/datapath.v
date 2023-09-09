@@ -1,12 +1,12 @@
 module datapath(
-    input logic clk, 
-    input logic reset,
-    input logic PCSrc,
+    input reg clk, 
+    input reg reset,
+    input reg PCSrc,
     output wire [31:0] PC // Changed reg to wire
 );
 
     wire [31:0] PCNext, PCPlus4, PCTarget; // Changed reg to wire for these as well
-    logic [31:0] ImmExt;  // NOTE: You still need to define or provide this somewhere!
+    wire [31:0] ImmExt;  // NOTE: You still need to define or provide this somewhere!
 
     // next PC logic
     flopr #(32) pcreg(
