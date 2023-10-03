@@ -1,0 +1,12 @@
+//
+// File created by:  ncverilog
+// Do not modify this file
+//
+adder.v
+flopr.v
+mux2.v
+datapath.v
+tb_datapath.v
++access+rw
++gui
++nccoverage+all

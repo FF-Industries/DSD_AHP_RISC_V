@@ -1,0 +1,12 @@
+s1(11Sep2023:13:10:07):  ncverilog adder.v flopr.v mux2.v datapath.v tb_datapath.v +access+rw +gui +nccoverage+all 
+s2(11Sep2023:13:11:51):  ncverilog adder.v flopr.v mux2.v datapath.v tb_datapath.v +access+rw +gui +nccoverage+all 
+s3(11Sep2023:13:17:02):  ncverilog adder.v flopr.v mux2.v datapath.v tb_datapath.v +access+rw +gui +nccoverage+all 
+s4(11Sep2023:13:18:19):  ncverilog adder.v flopr.v mux2.v datapath.v tb_datapath.v +access+rw +gui +nccoverage+all 
+s5(11Sep2023:13:22:57):  ncverilog adder.v flopr.v mux2.v datapath.v tb_datapath.v +access+rw +gui +nccoverage+all 
+s6(11Sep2023:13:37:28):  ncverilog adder.v flopr.v mux2.v datapath.v tb_datapath.v +access+rw +gui +nccoverage+all 
+s7(11Sep2023:13:38:27):  ncverilog adder.v flopr.v mux2.v datapath.v tb_datapath.v +access+rw +gui +nccoverage+all 
+s8(12Sep2023:13:34:07):  ncverilog datapath.v tb_datapath.v +access+rw +gui +nccoverage+all 
+s9(15Sep2023:08:27:57):  ncverilog adder.v flopr.v mux2.v datapath.v tb_datapath.v +access+rw +gui +nccoverage+all 
+s10(15Sep2023:08:36:01):  ncverilog imem.v tb_imem.v +access+rw +gui +nccoverage+allncverilog adder.v flopr.v mux2.v datapath.v tb_datapath.v +access+rw +gui +nccoverage+all 
+s11(15Sep2023:08:36:10):  ncverilog adder.v flopr.v mux2.v datapath.v tb_datapath.v +access+rw +gui +nccoverage+all 
+s12(15Sep2023:08:52:37):  ncverilog adder.v flopr.v mux2.v datapath.v tb_datapath.v +access+rw +gui +nccoverage+all 

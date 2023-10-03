@@ -1,0 +1,62 @@
+ncverilog(64): 15.20-s086: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+TOOL:	ncverilog	15.20-s086: Started on Sep 15, 2023 at 08:46:36 IST
+ncverilog
+	extend.v
+	tb_extend.v
+	+access+rw
+	+gui
+	+nccoverage+all
+Recompiling... reason: file './tb_extend.v' is newer than expected.
+	expected: Mon Sep 11 10:23:17 2023
+	actual:   Fri Sep 15 08:38:42 2023
+file: tb_extend.v
+	module worklib.testbench_extend:v
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+
+	Extracting FSMs for coverage:
+		worklib.extend
+		worklib.testbench_extend
+	Total FSMs extracted = 0
+	Building instance overlay tables: .................... Done
+	Enabling instrumentation for coverage types: block expression FSM toggle functional
+ncelab: *W,COVDCL: By default expression coverage is scored only for Verilog logical operators (|| and &&) and VHDL logical operators (OR, AND, NOR, and NAND), and is scored only in condition expressions. To score coverage for other operators and for expressions in other statements, use the "set_expr_coverable_operators" and "set_expr_coverable_statements" coverage configuration file commands with suitable options at elaboration.
+	Generating native compiled code:
+		worklib.testbench_extend:v <0x6d549fea>
+			streams:   5, words:  5040
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		             Instances  Unique
+		Modules:             2       2
+		Registers:           4       4
+		Vectored wires:      3       -
+		Always blocks:       2       2
+		Initial blocks:      2       2
+		Pseudo assignments:  2       2
+	Writing initial simulation snapshot: worklib.testbench_extend:v
+
+-------------------------------------
+Relinquished control to SimVision...
+ncsim> 
+ncsim> source /home/install/INCISIVE152/tools/inca/files/ncsimrc
+ncsim> database -open waves -into waves.shm -default
+Created default SHM database waves
+ncsim> probe -create -shm testbench_extend.clk testbench_extend.immext testbench_extend.immsrc testbench_extend.instr
+Created probe 1
+ncsim> run
+ncsim: *E,C58EXE: Coverage database file already exists in the test output directory './cov_work/scope/test', and will not be overwritten. Specify a different name for the test output directory or use the '-covoverwrite' option to overwrite the existing test output directory, and rerun the simulation.
+Starting extend module testbench
+Simulation complete via $finish(1) at time 40 NS + 0
+./tb_extend.v:41     $finish;
+ncsim> run
+ncsim: *E,RNFNSH: Cannot continue simulation due to a previous $finish.
+ncsim> run
+ncsim: *E,RNFNSH: Cannot continue simulation due to a previous $finish.
+ncsim> ^C
+ncsim> exit
+...Regained control from SimVision
+-------------------------------------
+ncsim: *F,C58EXS: Coverage database file already exists in the test output directory './cov_work/scope/test', and will not be overwritten. Specify a different name for the test output directory or use the '-covoverwrite' option to overwrite the existing test output directory, and rerun the simulation.
+TOOL:	ncverilog	15.20-s086: Exiting on Sep 15, 2023 at 08:52:20 IST  (total: 00:05:44)

@@ -1,0 +1,62 @@
+ncverilog(64): 15.20-s086: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+TOOL:	ncverilog	15.20-s086: Started on Sep 15, 2023 at 08:52:37 IST
+ncverilog
+	adder.v
+	flopr.v
+	mux2.v
+	datapath.v
+	tb_datapath.v
+	+access+rw
+	+gui
+	+nccoverage+all
+Recompiling... reason: file './datapath.v' is newer than expected.
+	expected: Mon Sep 11 13:18:12 2023
+	actual:   Fri Sep 15 08:37:26 2023
+file: tb_datapath.v
+	module worklib.testbench_datapath:v
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+
+	Extracting FSMs for coverage:
+		worklib.flopr
+		worklib.adder
+		worklib.mux2
+		worklib.datapath
+		worklib.testbench_datapath
+	Total FSMs extracted = 0
+	Building instance overlay tables: .................... Done
+	Enabling instrumentation for coverage types: block expression FSM toggle functional
+ncelab: *W,COVDCL: By default expression coverage is scored only for Verilog logical operators (|| and &&) and VHDL logical operators (OR, AND, NOR, and NAND), and is scored only in condition expressions. To score coverage for other operators and for expressions in other statements, use the "set_expr_coverable_operators" and "set_expr_coverable_statements" coverage configuration file commands with suitable options at elaboration.
+	Generating native compiled code:
+		worklib.testbench_datapath:v <0x2d82ad4f>
+			streams:   8, words:  4966
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		             Instances  Unique
+		Modules:             6       5
+		Registers:           4       4
+		Scalar wires:        3       -
+		Vectored wires:      6       -
+		Always blocks:       2       2
+		Initial blocks:      4       4
+		Cont. assignments:   3       2
+		Pseudo assignments:  4       4
+	Writing initial simulation snapshot: worklib.testbench_datapath:v
+
+-------------------------------------
+Relinquished control to SimVision...
+ncsim> 
+ncsim> source /home/install/INCISIVE152/tools/inca/files/ncsimrc
+ncsim> database -open waves -into waves.shm -default
+Created default SHM database waves
+ncsim> probe -create -shm testbench_datapath.PC testbench_datapath.clk testbench_datapath.reset testbench_datapath.PCSrc
+Created probe 1
+ncsim> run
+ncsim: *E,C58EXE: Coverage database file already exists in the test output directory './cov_work/scope/test', and will not be overwritten. Specify a different name for the test output directory or use the '-covoverwrite' option to overwrite the existing test output directory, and rerun the simulation.
+Starting datapath module testbench
+Simulation complete via $finish(1) at time 30 NS + 0
+./tb_datapath.v:30     $finish;
+ncsim> ncsim: *E,C58EXE: Coverage database file already exists in the test output directory './cov_work/scope/test', and will not be overwritten. Specify a different name for the test output directory or use the '-covoverwrite' option to overwrite the existing test output directory, and rerun the simulation.
+TOOL:	ncverilog	15.20-s086: Exiting on Sep 15, 2023 at 08:57:35 IST  (total: 00:04:58)

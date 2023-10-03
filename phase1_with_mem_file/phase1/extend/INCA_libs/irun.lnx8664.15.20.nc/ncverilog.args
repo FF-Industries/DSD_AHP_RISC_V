@@ -1,0 +1,9 @@
+//
+// File created by:  ncverilog
+// Do not modify this file
+//
+extend.v
+tb_extend.v
++access+rw
++gui
++nccoverage+all
