@@ -1,0 +1,44 @@
+ncverilog(64): 15.20-s086: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+TOOL:	ncverilog	15.20-s086: Started on Oct 05, 2023 at 00:27:11 IST
+ncverilog
+	adder.v
+	aludec.v
+	controller.v
+	datapath.v
+	dmem.v
+	extend.v
+	flopenr.v
+	flopr.v
+	imem.v
+	maindec.v
+	mux2.v
+	mux3.v
+	riscvsingle.v
+	testbench.v
+	top.v
+	regfile.v
+	alu.v
+	+access+rw
+	+gui
+	+sv
+	+nccoverage+all
+ncsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+
+-------------------------------------
+Relinquished control to SimVision...
+ncsim> 
+ncsim> source /home/install/INCISIVE152/tools/inca/files/ncsimrc
+ncsim> database -open waves -into waves.shm -default
+Created default SHM database waves
+ncsim> probe -create -shm testbench.DataAdr testbench.MemWrite testbench.WriteData testbench.clk testbench.reset
+Created probe 1
+ncsim> run
+ncsim: *E,C58EXE: Coverage database file already exists in the test output directory './cov_work/scope/test', and will not be overwritten. Specify a different name for the test output directory or use the '-covoverwrite' option to overwrite the existing test output directory, and rerun the simulation.
+Simulation failed
+Simulation stopped via $stop(1) at time 205 NS + 1
+ncsim> ^C
+ncsim> exit
+...Regained control from SimVision
+-------------------------------------
+ncsim: *F,C58EXS: Coverage database file already exists in the test output directory './cov_work/scope/test', and will not be overwritten. Specify a different name for the test output directory or use the '-covoverwrite' option to overwrite the existing test output directory, and rerun the simulation.
+TOOL:	ncverilog	15.20-s086: Exiting on Oct 05, 2023 at 00:27:57 IST  (total: 00:00:46)
