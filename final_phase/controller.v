@@ -7,7 +7,7 @@ module controller(input wire [6:0] op,
  output reg PCSrc, ALUSrc,
  output reg RegWrite, Jump,
  output reg [1:0] ImmSrc,
- output reg [2:0] ALUControl);
+ output reg [3:0] ALUControl);
 reg [1:0] ALUOp;
 reg Branch;
 maindec md(op, ResultSrc, MemWrite, Branch,

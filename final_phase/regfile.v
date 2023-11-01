@@ -16,16 +16,9 @@ module regfile (
   assign rs2_data = registers[rs2_addr];
 
   // Write data to the registers
-  always_ff @(posedge clk) begin
+  always @(posedge clk) begin
     if (RegWrite) begin
       registers[rd_addr] <= write_data;
-    end
-  end
-
-  // Initial values of registers
-  initial begin
-    for (int i = 0; i < 32; i++) begin
-      registers[i] = 32'h00000000;
     end
   end
 endmodule
