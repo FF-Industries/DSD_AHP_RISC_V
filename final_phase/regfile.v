@@ -5,8 +5,8 @@ module regfile (
   input wire [4:0] rs2_addr,
   input wire [4:0] rd_addr,
   input wire [31:0] write_data,
-  output reg [31:0] rs1_data,
-  output reg [31:0] rs2_data
+  output wire [31:0] rs1_data,
+  output wire [31:0] rs2_data
   
 );
   reg [31:0] registers [0:31]; // Array of registers

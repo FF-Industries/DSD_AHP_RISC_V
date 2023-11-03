@@ -4,15 +4,15 @@ input wire PCSrc, ALUSrc,
 input wire RegWrite,
 input wire [1:0] ImmSrc,
 input wire [2:0] ALUControl,
-output reg Zero,
-output reg [31:0] PC,
+output wire Zero,
+output wire [31:0] PC,
 input wire [31:0] Instr,
-output reg [31:0] ALUResult, WriteData,
+output wire [31:0] ALUResult, WriteData,
 input wire [31:0] ReadData);
- reg [31:0] PCNext, PCPlus4, PCTarget;
- reg [31:0] ImmExt;
- reg [31:0] SrcA, SrcB;
- reg [31:0] Result;
+ wire [31:0] PCNext, PCPlus4, PCTarget;
+ wire [31:0] ImmExt;
+ wire [31:0] SrcA, SrcB;
+ wire [31:0] Result;
  // next PC logic
  flopr #(32) pcreg(clk, reset, PCNext, PC);
  adder pcadd4(PC, 32'd4, PCPlus4);

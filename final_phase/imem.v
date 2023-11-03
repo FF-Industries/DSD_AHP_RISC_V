@@ -1,5 +1,5 @@
 module imem(input wire [31:0] a,
- output reg [31:0] rd);
+ output wire [31:0] rd);
  reg [31:0] RAM[63:0];
  initial
  $readmemh("riscvtest.txt",RAM);

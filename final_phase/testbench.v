@@ -1,8 +1,8 @@
 module testbench();
  reg clk;
  reg reset;
- reg [31:0] WriteData, DataAdr;
- reg MemWrite;
+ wire [31:0] WriteData, DataAdr;
+ wire MemWrite;
  // instantiate device to be tested
  top dut(clk, reset, WriteData, DataAdr, MemWrite);
  // initialize test
