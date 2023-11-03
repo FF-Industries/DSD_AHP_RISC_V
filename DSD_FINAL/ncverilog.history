@@ -1,0 +1,1 @@
+s1(03Nov2023:08:46:39):  ncverilog testbench.v top.v controller.v maindec.v regfile.v dmem.v aludec.v datapath.v mux3.v mux2.v imem.v adder.v flopr.v extend.v alu.v riscvsingle.v +sv +access+rw +gui +nccoverage+all 

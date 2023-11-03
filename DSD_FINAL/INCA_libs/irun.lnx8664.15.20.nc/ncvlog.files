@@ -1,0 +1,20 @@
+//
+// File created by:  ncverilog
+// Do not modify this file
+//
+/home/cmos/Desktop/AHP/DSD_FINAL/testbench.v
+/home/cmos/Desktop/AHP/DSD_FINAL/top.v
+/home/cmos/Desktop/AHP/DSD_FINAL/controller.v
+/home/cmos/Desktop/AHP/DSD_FINAL/maindec.v
+/home/cmos/Desktop/AHP/DSD_FINAL/regfile.v
+/home/cmos/Desktop/AHP/DSD_FINAL/dmem.v
+/home/cmos/Desktop/AHP/DSD_FINAL/aludec.v
+/home/cmos/Desktop/AHP/DSD_FINAL/datapath.v
+/home/cmos/Desktop/AHP/DSD_FINAL/mux3.v
+/home/cmos/Desktop/AHP/DSD_FINAL/mux2.v
+/home/cmos/Desktop/AHP/DSD_FINAL/imem.v
+/home/cmos/Desktop/AHP/DSD_FINAL/adder.v
+/home/cmos/Desktop/AHP/DSD_FINAL/flopr.v
+/home/cmos/Desktop/AHP/DSD_FINAL/extend.v
+/home/cmos/Desktop/AHP/DSD_FINAL/alu.v
+/home/cmos/Desktop/AHP/DSD_FINAL/riscvsingle.v

@@ -1,0 +1,27 @@
+ncverilog testbench.v top.v controller.v maindec.v regfile.v dmem.v aludec.v datapath.v mux3.v mux2.v imem.v adder.v flopr.v extend.v alu.v riscvsingle.v +sv +access+rw +gui +nccoverage+all
+imc
+genus -gui
+read_libs saed90nm_typ.lib
+read_hdl -sv top.v controller.v maindec.v regfile.v aludec.v datapath.v mux3.v mux2.v adder.v flopr.v extend.v alu.v riscvsingle.v
+elaborate
+read_sdc constraints_top.sdc
+syn_generic
+syn_map
+syn_opt -incremental
+report_timing> top_timinig.rpt
+report_area> top_area.rpt
+report_power> top_power.rpt
+write_hdl> top_netlist.v
+quit
+
+equivalence checking:
+lec -LPGXL
+read library -Both -Replace -sensitive -Verilog saed90nm.v -nooptimize
+read design top.v controller.v maindec.v regfile.v aludec.v datapath.v mux3.v mux2.v adder.v flopr.v extend.v alu.v riscvsingle.v -Verilog -Golden -sensitive -continuousassignment Bidirectional -nokeep_unreach -nosupply
+read design top_netlist.v -Verilog -Revised -sensitive -continuousassignment Bidirectional -nokeep_unreach -nosupply
+set system mode lec
+add compared points -all
+compare
+
+linting:
+irun -superLint top.v controller.v maindec.v regfile.v aludec.v datapath.v mux3.v mux2.v adder.v flopr.v extend.v alu.v riscvsingle.v

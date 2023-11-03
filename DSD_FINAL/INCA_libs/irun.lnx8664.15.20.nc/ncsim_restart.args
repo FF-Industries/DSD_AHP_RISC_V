@@ -1,0 +1,28 @@
+//
+// File created by:  ncverilog
+// Do not modify this file
+//
++sv
++access+rw
++gui
++nccoverage+all
+-gui
+-MESSAGES
++EMGRLOG
+ncverilog.log
+-XLSTIME
+1698981399
+-XLKEEP
+-XLMODE
+./INCA_libs/irun.lnx8664.15.20.nc
+-RUNMODE
+-CDSLIB
+./INCA_libs/irun.lnx8664.15.20.nc/cds.lib
+-HDLVAR
+./INCA_libs/irun.lnx8664.15.20.nc/hdl.var
+-XLNAME
+ncverilog
+-XLVERSION
+"TOOL:	ncverilog	15.20-s086"
+-XLNAME
+./INCA_libs/irun.lnx8664.15.20.nc/cad2_7171

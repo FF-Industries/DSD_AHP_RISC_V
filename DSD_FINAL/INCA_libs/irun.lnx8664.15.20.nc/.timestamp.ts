@@ -1,0 +1,16 @@
+1698932496 /home/cmos/Desktop/AHP/DSD_FINAL/riscvsingle.v
+1698942196 /home/cmos/Desktop/AHP/DSD_FINAL/adder.v
+1698942696 /home/cmos/Desktop/AHP/DSD_FINAL/datapath.v
+1698950644 /home/cmos/Desktop/AHP/DSD_FINAL/maindec.v
+1698980320 /home/cmos/Desktop/AHP/DSD_FINAL/regfile.v
+1698950752 /home/cmos/Desktop/AHP/DSD_FINAL/testbench.v
+1698943050 /home/cmos/Desktop/AHP/DSD_FINAL/aludec.v
+1698940490 /home/cmos/Desktop/AHP/DSD_FINAL/alu.v
+1698950728 /home/cmos/Desktop/AHP/DSD_FINAL/controller.v
+1698943238 /home/cmos/Desktop/AHP/DSD_FINAL/dmem.v
+1698941244 /home/cmos/Desktop/AHP/DSD_FINAL/flopr.v
+1698942458 /home/cmos/Desktop/AHP/DSD_FINAL/mux3.v
+1698942442 /home/cmos/Desktop/AHP/DSD_FINAL/mux2.v
+1698942308 /home/cmos/Desktop/AHP/DSD_FINAL/imem.v
+1698940876 /home/cmos/Desktop/AHP/DSD_FINAL/extend.v
+1698950746 /home/cmos/Desktop/AHP/DSD_FINAL/top.v

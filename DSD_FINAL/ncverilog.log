@@ -1,0 +1,177 @@
+ncverilog(64): 15.20-s086: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+TOOL:	ncverilog	15.20-s086: Started on Nov 03, 2023 at 08:46:39 IST
+ncverilog
+	testbench.v
+	top.v
+	controller.v
+	maindec.v
+	regfile.v
+	dmem.v
+	aludec.v
+	datapath.v
+	mux3.v
+	mux2.v
+	imem.v
+	adder.v
+	flopr.v
+	extend.v
+	alu.v
+	riscvsingle.v
+	+sv
+	+access+rw
+	+gui
+	+nccoverage+all
+file: testbench.v
+	module worklib.testbench:v
+		errors: 0, warnings: 0
+file: top.v
+	module worklib.top:v
+		errors: 0, warnings: 0
+file: controller.v
+	module worklib.controller:v
+		errors: 0, warnings: 0
+file: maindec.v
+	module worklib.maindec:v
+		errors: 0, warnings: 0
+file: regfile.v
+	module worklib.regfile:v
+		errors: 0, warnings: 0
+file: dmem.v
+	module worklib.dmem:v
+		errors: 0, warnings: 0
+file: aludec.v
+	module worklib.aludec:v
+		errors: 0, warnings: 0
+file: datapath.v
+	module worklib.datapath:v
+		errors: 0, warnings: 0
+file: mux3.v
+	module worklib.mux3:v
+		errors: 0, warnings: 0
+file: mux2.v
+	module worklib.mux2:v
+		errors: 0, warnings: 0
+file: imem.v
+	module worklib.imem:v
+		errors: 0, warnings: 0
+file: adder.v
+	module worklib.adder:v
+		errors: 0, warnings: 0
+file: flopr.v
+	module worklib.flopr:v
+		errors: 0, warnings: 0
+file: extend.v
+	module worklib.extend:v
+		errors: 0, warnings: 0
+file: alu.v
+	module worklib.alu:v
+		errors: 0, warnings: 0
+file: riscvsingle.v
+	module worklib.riscvsingle:v
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+ncelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+
+	Extracting FSMs for coverage:
+		worklib.maindec
+		worklib.aludec
+		worklib.controller
+		worklib.flopr
+		worklib.adder
+		worklib.mux2
+		worklib.regfile
+		worklib.extend
+		worklib.alu
+		worklib.mux3
+		worklib.datapath
+		worklib.riscvsingle
+		worklib.imem
+		worklib.dmem
+		worklib.top
+		worklib.testbench
+	Total FSMs extracted = 0
+	Building instance overlay tables: ..................
+ $readmemh("riscvtest.txt",RAM);
+                             |
+ncelab: *W,MEMODR (./imem.v,5|29): $readmem default memory order incompatible with IEEE1364.
+.. Done
+	Enabling instrumentation for coverage types: block expression FSM toggle functional
+ncelab: *W,COVDCL: By default expression coverage is scored only for Verilog logical operators (|| and &&) and VHDL logical operators (OR, AND, NOR, and NAND), and is scored only in condition expressions. To score coverage for other operators and for expressions in other statements, use the "set_expr_coverable_operators" and "set_expr_coverable_statements" coverage configuration file commands with suitable options at elaboration.
+	Generating native compiled code:
+		worklib.adder:v <0x60702264>
+			streams:   1, words:   418
+		worklib.alu:v <0x027369fb>
+			streams:   1, words:  3927
+		worklib.aludec:v <0x7dd34830>
+			streams:   1, words:  2651
+		worklib.controller:v <0x4e45b3b1>
+			streams:  11, words:  5868
+		worklib.datapath:v <0x300332ad>
+			streams:  22, words:  7136
+		worklib.dmem:v <0x287ae2cf>
+			streams:   3, words:  1533
+		worklib.extend:v <0x6df1efe5>
+			streams:   1, words:  2582
+		worklib.flopr:v <0x1e1b9ec4>
+			streams:   2, words:   676
+		worklib.imem:v <0x0a4d7908>
+			streams:   2, words:   968
+		worklib.maindec:v <0x27a64490>
+			streams:   1, words: 15374
+		worklib.mux2:v <0x3303785d>
+			streams:   1, words:   477
+		worklib.mux3:v <0x09be659a>
+			streams:   1, words:   622
+		worklib.regfile:v <0x7c4f8e6a>
+			streams:  36, words: 13577
+		worklib.riscvsingle:v <0x453fa88e>
+			streams:  17, words:  6386
+		worklib.testbench:v <0x283de0d8>
+			streams:   8, words:  5520
+		worklib.top:v <0x7475fc35>
+			streams:  12, words:  3918
+ reg [31:0] RAM[63:0];
+              |
+ncelab: *W,COVMDD (./imem.v,3|14): Toggle coverage for bit, logic, reg, wire, and struct multi-dimensional static arrays and vectors is not supported by default. To enable toggle coverage on for these types specify 'set_toggle_scoring -sv_mda [<max_bit_base2_exponent>] [-sv_mda_of_struct]' ccf command in the coverage configuration file.
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		              Instances  Unique
+		Modules:             18      16
+		Registers:           69      67
+		Scalar wires:        33       -
+		Expanded wires:      32       1
+		Vectored wires:      76       -
+		Always blocks:       19      17
+		Initial blocks:       2       2
+		Pseudo assignments:  66      66
+	Writing initial simulation snapshot: worklib.testbench:v
+ncsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+
+-------------------------------------
+Relinquished control to SimVision...
+ncsim> 
+ncsim> source /home/install/INCISIVE152/tools/inca/files/ncsimrc
+ncsim> database -open waves -into waves.shm -default
+Created default SHM database waves
+ncsim> probe -create -shm testbench.DataAdr testbench.MemWrite testbench.WriteData testbench.clk testbench.reset
+Created probe 1
+ncsim> run
+Simulation failed
+Simulation stopped via $stop(1) at time 200 NS + 0
+ncsim> ^C
+ncsim> exit
+...Regained control from SimVision
+-------------------------------------
+
+coverage setup:
+  workdir  :  ./cov_work
+  dutinst  :  testbench(testbench)
+  scope    :  scope
+  testname :  test
+
+coverage files:
+  model(design data) :  ./cov_work/scope/icc_0a3132bf_00000000.ucm
+  data               :  ./cov_work/scope/test/icc_0a3132bf_00000000.ucd
+TOOL:	ncverilog	15.20-s086: Exiting on Nov 03, 2023 at 08:47:07 IST  (total: 00:00:28)

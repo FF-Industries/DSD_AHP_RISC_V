@@ -1,0 +1,24 @@
+//
+// File created by:  ncverilog
+// Do not modify this file
+//
+testbench.v
+top.v
+controller.v
+maindec.v
+regfile.v
+dmem.v
+aludec.v
+datapath.v
+mux3.v
+mux2.v
+imem.v
+adder.v
+flopr.v
+extend.v
+alu.v
+riscvsingle.v
++sv
++access+rw
++gui
++nccoverage+all
