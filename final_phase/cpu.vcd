@@ -1,5 +1,5 @@
 $date
-	Sun Nov 05 18:50:43 2023
+	Sun Nov 05 22:35:29 2023
 $end
 $version
 	Icarus Verilog
@@ -55,18 +55,18 @@ $var wire 1 6 PCSrc $end
 $var wire 3 = funct3 [2:0] $end
 $var wire 1 > funct7b5 $end
 $var wire 7 ? op [6:0] $end
+$var wire 1 @ beq $end
 $var wire 1 2 Zero $end
-$var wire 2 @ ResultSrc [1:0] $end
+$var wire 2 A ResultSrc [1:0] $end
 $var wire 1 5 RegWrite $end
 $var wire 1 " MemWrite $end
 $var wire 1 8 Jump $end
-$var wire 2 A ImmSrc [1:0] $end
-$var wire 1 B Branch $end
+$var wire 2 B ImmSrc [1:0] $end
+$var wire 1 C Branch $end
 $var wire 1 : ALUSrc $end
-$var wire 2 C ALUOp [1:0] $end
-$var wire 4 D ALUControl [3:0] $end
+$var wire 2 D ALUOp [1:0] $end
+$var wire 4 E ALUControl [3:0] $end
 $scope module ad $end
-$var wire 1 E RtypeSub $end
 $var wire 3 F funct3 [2:0] $end
 $var wire 1 > funct7b5 $end
 $var wire 1 G opb5 $end
@@ -80,7 +80,7 @@ $var wire 1 5 RegWrite $end
 $var wire 1 " MemWrite $end
 $var wire 1 8 Jump $end
 $var wire 2 L ImmSrc [1:0] $end
-$var wire 1 B Branch $end
+$var wire 1 C Branch $end
 $var wire 1 : ALUSrc $end
 $var wire 2 M ALUOp [1:0] $end
 $var reg 11 N controls [10:0] $end
@@ -243,12 +243,12 @@ b0 I
 b10 H
 0G
 b0 F
-0E
-b0 D
-b10 C
-0B
+b0 E
+b10 D
+0C
+b0 B
 b0 A
-b0 @
+0@
 b10011 ?
 0>
 b0 =
@@ -395,7 +395,7 @@ b111 W
 b111 w
 b111 ~
 bx 9
-bx A
+bx B
 bx L
 bx P
 bx c
@@ -406,7 +406,7 @@ b101 $"
 1G
 b1xx00000100 N
 b110 <
-b110 D
+b110 E
 b110 I
 b110 O
 b110 ^
@@ -469,8 +469,9 @@ b1100 r
 b100 W
 b100 w
 b100 ~
+1@
 b111 <
-b111 D
+b111 E
 b111 I
 b111 O
 b111 ^
@@ -534,8 +535,9 @@ b1011 ]
 b1011 a
 b1011 s
 b1011 b
+0@
 b0 <
-b0 D
+b0 E
 b0 I
 b0 O
 b0 ^
@@ -576,18 +578,18 @@ b110000 e
 b110000 i
 b110000 #"
 b1000 <
-b1000 D
+b1000 E
 b1000 I
 b1000 O
 b1000 ^
 05
 b10 9
-b10 A
+b10 B
 b10 L
 b10 P
 b10 c
-1B
-b1 C
+1C
+b1 D
 b1 H
 b1 M
 b1000 W
@@ -644,7 +646,7 @@ b11000 r
 #90
 12
 b10 <
-b10 D
+b10 E
 b10 I
 b10 O
 b10 ^
@@ -653,12 +655,12 @@ b0 w
 b0 ~
 15
 bx 9
-bx A
+bx B
 bx L
 bx P
 bx c
-0B
-b10 C
+0C
+b10 D
 b10 H
 b10 M
 b1xx00000100 N
@@ -730,17 +732,17 @@ b1000 i
 b1000 #"
 05
 b10 9
-b10 A
+b10 B
 b10 L
 b10 P
 b10 c
-1B
-b1 C
+1C
+b1 D
 b1 H
 b1 M
 b1000001010 N
 b1000 <
-b1000 D
+b1000 E
 b1000 I
 b1000 O
 b1000 ^
@@ -787,23 +789,23 @@ b100000 r
 #105
 0$
 #110
+06
 b10 <
-b10 D
+b10 E
 b10 I
 b10 O
 b10 ^
-06
 b1 W
 b1 w
 b1 ~
 15
 bx 9
-bx A
+bx B
 bx L
 bx P
 bx c
-0B
-b10 C
+0C
+b10 D
 b10 H
 b10 M
 b1xx00000100 N
@@ -878,7 +880,7 @@ b1100 a
 b1100 s
 b1100 b
 b0 <
-b0 D
+b0 E
 b0 I
 b0 O
 b0 ^
@@ -927,11 +929,10 @@ b111 W
 b111 w
 b111 ~
 b1000 <
-b1000 D
+b1000 E
 b1000 I
 b1000 O
 b1000 ^
-1E
 b111 #
 b111 *
 b111 -
@@ -988,13 +989,13 @@ b1010100 i
 b1010100 #"
 05
 b1 9
-b1 A
+b1 B
 b1 L
 b1 P
 b1 c
 1:
 1"
-b0 C
+b0 D
 b0 H
 b0 M
 02
@@ -1002,9 +1003,8 @@ b1100000 W
 b1100000 w
 b1100000 ~
 b111000000 N
-0E
 b0 <
-b0 D
+b0 E
 b0 I
 b0 O
 b0 ^
@@ -1065,13 +1065,13 @@ b111 w
 b111 ~
 15
 b0 9
-b0 A
+b0 B
 b0 L
 b0 P
 b0 c
 0"
 b1 4
-b1 @
+b1 A
 b1 K
 b1 S
 b1 v
@@ -1142,17 +1142,17 @@ b10010 W
 b10010 w
 b10010 ~
 bx 9
-bx A
+bx B
 bx L
 bx P
 bx c
 0:
 b0 4
-b0 @
+b0 A
 b0 K
 b0 S
 b0 v
-b10 C
+b10 D
 b10 H
 b10 M
 bx '
@@ -1232,16 +1232,16 @@ b1000100 W
 b1000100 w
 b1000100 ~
 b11 9
-b11 A
+b11 B
 b11 L
 b11 P
 b11 c
 b10 4
-b10 @
+b10 A
 b10 K
 b10 S
 b10 v
-b0 C
+b0 D
 b0 H
 b0 M
 18
@@ -1298,16 +1298,16 @@ b1000000 r
 #180
 06
 bx 9
-bx A
+bx B
 bx L
 bx P
 bx c
 b0 4
-b0 @
+b0 A
 b0 K
 b0 S
 b0 v
-b10 C
+b10 D
 b10 H
 b10 M
 08
@@ -1381,13 +1381,13 @@ b100000 i
 b100000 #"
 05
 b1 9
-b1 A
+b1 B
 b1 L
 b1 P
 b1 c
 1:
 1"
-b0 C
+b0 D
 b0 H
 b0 M
 02
@@ -1396,7 +1396,7 @@ b1100100 w
 b1100100 ~
 b111000000 N
 b0 <
-b0 D
+b0 E
 b0 I
 b0 O
 b0 ^

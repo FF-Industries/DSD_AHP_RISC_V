@@ -14,6 +14,9 @@ module controller (
 );
   wire [1:0] ALUOp;
   wire Branch;
+  wire beq;
+
+  assign beq = funct3[0];
   maindec md (
       op,
       ResultSrc,
@@ -32,5 +35,5 @@ module controller (
       ALUOp,
       ALUControl
   );
-  assign PCSrc = Branch & Zero | Jump;
+  assign PCSrc = (Branch & (beq ^ Zero)) | Jump;
 endmodule
