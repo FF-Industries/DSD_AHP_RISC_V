@@ -1,15 +1,15 @@
 module regfile (
-  input wire clk,
-  input wire RegWrite,
-  input wire [4:0] rs1_addr,
-  input wire [4:0] rs2_addr,
-  input wire [4:0] rd_addr,
-  input wire [31:0] write_data,
-  output wire [31:0] rs1_data,
-  output wire [31:0] rs2_data
-  
+    input wire clk,
+    input wire RegWrite,
+    input wire [4:0] rs1_addr,
+    input wire [4:0] rs2_addr,
+    input wire [4:0] rd_addr,
+    input wire [31:0] write_data,
+    output wire [31:0] rs1_data,
+    output wire [31:0] rs2_data
+
 );
-  reg [31:0] registers [0:31]; // Array of registers
+  reg [31:0] registers[0:31];  // Array of registers
 
   // Read data from the registers
   assign rs1_data = registers[rs1_addr];
