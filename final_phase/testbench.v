@@ -5,6 +5,11 @@ module testbench();
  wire MemWrite;
  // instantiate device to be tested
  top dut(clk, reset, WriteData, DataAdr, MemWrite);
+ //
+ initial begin
+ $dumpfile("cpu.vcd");
+ $dumpvars(0);
+ end
  // initialize test
  initial
  begin

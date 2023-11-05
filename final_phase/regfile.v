@@ -21,4 +21,12 @@ module regfile (
       registers[rd_addr] <= write_data;
     end
   end
+
+  integer i;
+  // Initial values of registers
+  initial begin
+    for (i = 0; i < 32; i++) begin
+      registers[i] = 32'h00000000;
+    end
+  end
 endmodule
